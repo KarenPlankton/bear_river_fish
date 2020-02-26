@@ -11,7 +11,9 @@ class Bear
   @stomach.push(yummy_fish)
   end
 
-
+  def fish_eaten_count
+    return @stomach.length
+  end
 
 
 
