@@ -34,14 +34,10 @@ class BearTest < MiniTest::Test
    assert_equal(1,@bear1.stomach.length)
  end
 
- def test_has_many_fish()
- fish1=Fish.new("Harry")
- fish2=Fish.new("Larry")
- fish3=Fish.new("Garry")
-  @bear1.@stomach.push(fish1)
-  @bear1.@stomach.push(fish2)
-  @bear1.@stomach.push(fish3)
-   assert_equal(3,@bear1.fish_eaten_count)
+ def test_fish_eaten_count()
+
+@bear1.take_fish_from_river(@river1)
+   assert_equal(1,@bear1.fish_eaten_count)
  end
 
 
